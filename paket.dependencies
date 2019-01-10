@@ -1,4 +1,5 @@
 group Server
+    generate_load_scripts: true
     source https://api.nuget.org/v3/index.json
     framework: netcoreapp2.1
     storage: none
@@ -6,6 +7,7 @@ group Server
     nuget FSharp.Core
     nuget Saturn
     nuget Thoth.Json.Giraffe
+    nuget Fable.Elmish.React ~> 2
 
 group Client
     source https://api.nuget.org/v3/index.json

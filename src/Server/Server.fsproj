@@ -5,14 +5,14 @@
         <TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="..\Shared\Shared.fs" />
+        <None Include="Script.fsx" />
         <Compile Include="Server.fs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="paket.references" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Client\Client.fsproj" />
+      <ProjectReference Include="..\Shared\Shared.fsproj" />
     </ItemGroup>
     <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

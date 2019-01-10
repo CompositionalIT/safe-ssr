@@ -2,3 +2,5 @@ group Server
     FSharp.Core
     Saturn
     Thoth.Json.Giraffe
+    Fable.Elmish.React
+    Fable.React

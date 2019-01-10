@@ -5,6 +5,7 @@ obj/
 bin/
 packages/
 paket-files/
+.paket/load
 node_modules/
 src/Client/public/js/
 release.cmd

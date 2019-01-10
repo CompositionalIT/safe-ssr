@@ -15,6 +15,11 @@ let port = 8085us
 let getInitCounter() : Task<Counter> = task { return { Value = 42 } }
 
 let webApp = router {
+    get "/" (fun next ctx ->
+        task {
+            let html = initialModel () |> makeInitialHtml |> Fable.Helpers.ReactServer.renderToString
+            return! htmlString html next ctx
+        })
     get "/api/init" (fun next ctx ->
         task {
             let! counter = getInitCounter()
