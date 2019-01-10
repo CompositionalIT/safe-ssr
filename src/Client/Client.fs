@@ -6,10 +6,16 @@ open Elmish.React
 open Fable.Helpers.React
 open Fable.Helpers.React.Props
 open Fable.PowerPack.Fetch
+open Fable.Import
+open Fable.Core.JsInterop
 
 open Thoth.Json
 open Shared
 open Fulma
+
+let init () : Model * Cmd<Msg> =
+    let model : Model = Browser.window?__INIT_MODEL__
+    model, Cmd.none
 
 let update (msg : Msg) (currentModel : Model) : Model * Cmd<Msg> =
     match currentModel.Counter, msg with
