@@ -41,7 +41,7 @@ Program.mkProgram init update view
 |> Program.withConsoleTrace
 |> Program.withHMR
 #endif
-|> Program.withReact "elmish-app"
+|> Program.withReactHydrate "elmish-app"
 #if DEBUG
 |> Program.withDebugger
 #endif
